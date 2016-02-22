@@ -63,19 +63,11 @@
 <script src="Release/fileloader.js"></script>
 <script>if (!(!Math.fround)) {
   var script = document.createElement('script');
-<<<<<<< HEAD:TemplateData/index.html
   script.src = "Release/TemplateData.js";
   document.body.appendChild(script);
 } else {
   var codeXHR = new XMLHttpRequest();
   codeXHR.open('GET', 'Release/TemplateData.js', true);
-=======
-  script.src = "Release/AT.js";
-  document.body.appendChild(script);
-} else {
-  var codeXHR = new XMLHttpRequest();
-  codeXHR.open('GET', 'Release/AT.js', true);
->>>>>>> parent of a734c76... j?:index.html
   codeXHR.onload = function() {
     var code = codeXHR.responseText;
     if (!Math.fround) { 

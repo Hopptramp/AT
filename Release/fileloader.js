@@ -20,8 +20,8 @@ Module.expectedDataFileDownloads++;
     } else {
       throw 'using preloaded data can only be done on a web page or in a web worker';
     }
-    var PACKAGE_NAME = 'TemplateData.data';
-    var REMOTE_PACKAGE_BASE = 'TemplateData.data';
+    var PACKAGE_NAME = 'AT.data';
+    var REMOTE_PACKAGE_BASE = 'AT.data';
     if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
       Module['locateFile'] = Module['locateFilePackage'];
       Module.printErr('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -31,7 +31,7 @@ Module.expectedDataFileDownloads++;
                               ((Module['filePackagePrefixURL'] || '') + REMOTE_PACKAGE_BASE);
   
       var REMOTE_PACKAGE_SIZE = 4857234;
-      var PACKAGE_UUID = '2e5425b2-79ae-4410-b6cf-0c5cd963ba9c';
+      var PACKAGE_UUID = '532ff1bb-8a97-4704-916e-ccc728568163';
     
     function fetchRemotePackage(packageName, packageSize, callback, errback) {
       var xhr = new XMLHttpRequest();
@@ -155,10 +155,10 @@ Module['FS_createPath']('/', 'Resources', true, true);
           DataRequest.prototype.requests["/Il2CppData/Metadata/global-metadata.dat"].onload();
           DataRequest.prototype.requests["/Resources/unity_default_resources"].onload();
           DataRequest.prototype.requests["/Resources/unity_builtin_extra"].onload();
-          Module['removeRunDependency']('datafile_TemplateData.data');
+          Module['removeRunDependency']('datafile_AT.data');
 
     };
-    Module['addRunDependency']('datafile_TemplateData.data');
+    Module['addRunDependency']('datafile_AT.data');
   
     if (!Module.preloadResults) Module.preloadResults = {};
   
